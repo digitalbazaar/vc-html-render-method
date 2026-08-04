@@ -11,3 +11,5 @@ node_modules
 reports
 .cache
 dist
+package-lock.json
+test/package-lock.json
