@@ -17,7 +17,7 @@ document.addEventListener('securitypolicyviolation', function(e) {
 (function() {
   var d = {reachedTop: false, reachedParent: false};
   try { void window.top.location.href; d.reachedTop = true; } catch(e) {}
-  try { void window.parent.document.cookie; d.reachedParent = true; } catch(e) {}
+  try { void window.parent.document; d.reachedParent = true; } catch(e) {}
   fetch('https://example.com/x').catch(function() {});
   var f = document.createElement('iframe');
   f.src = 'https://example.com/';
