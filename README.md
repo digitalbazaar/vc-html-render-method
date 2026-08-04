@@ -13,12 +13,12 @@ the credential, fully isolated from the host application.
 
 - The spec requires the page hosting the template to set a strict CSP
 (`frame-src 'none'`). Applying that to a whole application would break other
-`<iframe src>`- based features (for example CHAPI).
+`<iframe src>`-based features (for example CHAPI).
 - This library instead places the spec's "host page" role inside an iframe it
 owns, so the strict policy is scoped to that subtree and the consuming app's
 CSP is never touched.
 
-```sh
+```text
 App (any CSP; CHAPI <iframe src> keeps working)
   |-> host frame (library-owned; srcdoc)  CSP: frame-src 'none'
         |-> template frame  sandbox="allow-scripts", opaque origin
@@ -39,7 +39,7 @@ npm install @digitalbazaar/vc-html-renderer
 
 ```js
 import {HtmlRenderer, supportsHtml} from '@digitalbazaar/vc-html-renderer';
- 
+
 if(supportsHtml({credential})) {
   const handle = new HtmlRenderer().render({
     mount: document.querySelector('#slot'),
