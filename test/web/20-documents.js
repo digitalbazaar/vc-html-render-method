@@ -2,7 +2,7 @@
  * Copyright (c) 2026 Digital Bazaar, Inc.
  */
 import {createHostDocument, createTemplateDocument}
-  from '@bedrock/web-vc-html-renderer';
+  from '@digitalbazaar/vc-html-renderer';
 
 const CREDENTIAL = {
   '@context': ['https://www.w3.org/ns/credentials/v2'],
