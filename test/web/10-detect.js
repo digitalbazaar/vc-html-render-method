@@ -3,7 +3,7 @@
  */
 import {
   filterCredential, findHtmlRenderMethod, findHtmlRenderMethods, supportsHtml
-} from '@bedrock/web-vc-html-renderer';
+} from '@digitalbazaar/vc-html-renderer';
 
 const HTML_RENDER_METHOD = {
   type: 'TemplateRenderMethod',

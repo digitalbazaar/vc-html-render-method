@@ -1,7 +1,7 @@
 /*!
  * Copyright (c) 2026 Digital Bazaar, Inc.
  */
-import {HtmlRenderer} from '@bedrock/web-vc-html-renderer';
+import {HtmlRenderer} from '@digitalbazaar/vc-html-renderer';
 
 const READY_TEMPLATE =
   'data:text/html,<h1>x</h1>' +
