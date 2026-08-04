@@ -103,5 +103,58 @@ describe('detection', function() {
         const filtered = filterCredential({credential, renderMethod});
         filtered.credentialSubject.secret.should.equal('do-not-expose');
       });
+    it('selects a nested field and drops its unselected siblings',
+      async () => {
+        const credential = {
+          '@context': ['https://www.w3.org/ns/credentials/v2'],
+          type: ['VerifiableCredential'],
+          issuer: {id: 'did:example:123', name: 'The Issuer'},
+          credentialSubject: {
+            name: 'Ada',
+            secret: 'do-not-expose',
+            address: {city: 'London', zip: 'EC1', country: 'UK'}
+          }
+        };
+        const renderMethod = {
+          type: 'TemplateRenderMethod', renderSuite: 'html',
+          renderProperty: ['/credentialSubject/address/city'],
+          template: 'data:text/html,<h1>hi</h1>'
+        };
+        const filtered = filterCredential({credential, renderMethod});
+        // the selected leaf is present
+        filtered.credentialSubject.address.city.should.equal('London');
+        // unselected siblings at every level are gone
+        should.equal(filtered.credentialSubject.address.zip, undefined);
+        should.equal(filtered.credentialSubject.address.country, undefined);
+        should.equal(filtered.credentialSubject.name, undefined);
+        should.equal(filtered.credentialSubject.secret, undefined);
+        should.equal(filtered.issuer, undefined);
+        // JSON-LD type is always propagated
+        filtered.type.should.include('VerifiableCredential');
+      });
+    it('selects one array element and compacts the array', async () => {
+      const credential = {
+        '@context': ['https://www.w3.org/ns/credentials/v2'],
+        type: ['VerifiableCredential'],
+        credentialSubject: {
+          name: 'Ada',
+          degrees: [
+            {type: 'BachelorDegree', name: 'CS'},
+            {type: 'MasterDegree', name: 'Math'}
+          ]
+        }
+      };
+      const renderMethod = {
+        type: 'TemplateRenderMethod', renderSuite: 'html',
+        renderProperty: ['/credentialSubject/degrees/1/name'],
+        template: 'data:text/html,<h1>hi</h1>'
+      };
+      const filtered = filterCredential({credential, renderMethod});
+      // only the selected element survives, and the array is made dense
+      filtered.credentialSubject.degrees.length.should.equal(1);
+      filtered.credentialSubject.degrees[0].name.should.equal('Math');
+      // the element's type is carried along
+      filtered.credentialSubject.degrees[0].type.should.equal('MasterDegree');
+    });
   });
 });
