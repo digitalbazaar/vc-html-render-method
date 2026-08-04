@@ -1,7 +1,7 @@
 {
-  "name": "@bedrock/web-vc-html-renderer",
+  "name": "@digitalbazaar/vc-html-renderer",
   "version": "0.1.0",
-  "description": "Bedrock library that renders Verifiable Credential HTML Render Methods inside a nested, sandboxed iframe.",
+  "description": "Render Verifiable Credential HTML Render Methods inside a nested, sandboxed iframe.",
   "type": "module",
   "exports": "./lib/index.js",
   "files": [
@@ -24,10 +24,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/digitalbazaar/bedrock-web-vc-html-renderer"
+    "url": "https://github.com/digitalbazaar/vc-html-renderer"
   },
   "keywords": [
-    "bedrock",
     "vc",
     "verifiable credentials",
     "render method",
@@ -41,7 +40,7 @@
     "url": "https://digitalbazaar.com"
   },
   "bugs": {
-    "url": "https://github.com/digitalbazaar/bedrock-web-vc-html-renderer/issues"
+    "url": "https://github.com/digitalbazaar/vc-html-renderer/issues"
   },
-  "homepage": "https://github.com/digitalbazaar/bedrock-web-vc-html-renderer"
+  "homepage": "https://github.com/digitalbazaar/vc-html-renderer"
 }

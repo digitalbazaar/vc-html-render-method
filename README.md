@@ -1,4 +1,4 @@
-# @bedrock/web-vc-html-renderer
+# @digitalbazaar/vc-html-renderer
 
 Render a Verifiable Credential's **HTML Render Method** inside a nested,
 sandboxed iframe — framework-agnostic, and without changing the consuming app's
@@ -32,13 +32,13 @@ network access; it cannot reach the host frame or the application.
 ## Install
 
 ```sh
-npm install @bedrock/web-vc-html-renderer
+npm install @digitalbazaar/vc-html-renderer
 ```
 
 ## Usage
 
 ```js
-import {HtmlRenderer, supportsHtml} from '@bedrock/web-vc-html-renderer';
+import {HtmlRenderer, supportsHtml} from '@digitalbazaar/vc-html-renderer';
  
 if(supportsHtml({credential})) {
   const handle = new HtmlRenderer().render({
