@@ -1,7 +1,7 @@
 /*!
  * Copyright (c) 2026 Digital Bazaar, Inc.
  */
-import {HtmlRenderer} from '@digitalbazaar/vc-html-renderer';
+import {HtmlRenderer} from '@digitalbazaar/vc-html-render-method';
 
 // a template that probes its own isolation, then reports to `window.top`:
 //  - can it read `window.top` / the parent host frame? (must not)

@@ -1,4 +1,4 @@
-# @digitalbazaar/vc-html-renderer ChangeLog
+# @digitalbazaar/vc-html-render-method ChangeLog
 
 ## 0.1.0 - 2026-XX-XX
 

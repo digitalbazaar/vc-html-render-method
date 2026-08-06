@@ -8,7 +8,7 @@ import path from 'node:path';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // run the browser specs under `web/`
-config.karma.suites['vc-html-renderer'] =
+config.karma.suites['vc-html-render-method'] =
   path.join('web', '**', '*.js');
 
 // resolve the linked library (`file:..`) and its deps for the browser bundle
