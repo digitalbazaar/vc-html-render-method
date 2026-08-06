@@ -3,7 +3,7 @@
  */
 import {
   filterCredential, findHtmlRenderMethod, findHtmlRenderMethods, supportsHtml
-} from '@digitalbazaar/vc-html-renderer';
+} from '@digitalbazaar/vc-html-render-method';
 
 const HTML_RENDER_METHOD = {
   type: 'TemplateRenderMethod',

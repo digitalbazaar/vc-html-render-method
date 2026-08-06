@@ -1,7 +1,7 @@
 /*!
  * Copyright (c) 2026 Digital Bazaar, Inc.
  */
-import {HtmlRenderer} from '@digitalbazaar/vc-html-renderer';
+import {HtmlRenderer} from '@digitalbazaar/vc-html-render-method';
 
 const READY_TEMPLATE =
   'data:text/html,<h1 id="card">CARD</h1>' +

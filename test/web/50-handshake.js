@@ -1,7 +1,7 @@
 /*!
  * Copyright (c) 2026 Digital Bazaar, Inc.
  */
-import {HtmlRenderer} from '@digitalbazaar/vc-html-renderer';
+import {HtmlRenderer} from '@digitalbazaar/vc-html-render-method';
 
 // never calls renderMethodReady()
 const NO_SIGNAL_TEMPLATE = 'data:text/html,<h1>no signal</h1>';

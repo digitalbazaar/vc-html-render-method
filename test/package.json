@@ -1,5 +1,5 @@
 {
-  "name": "vc-html-renderer-test",
+  "name": "vc-html-render-method-test",
   "version": "0.0.1-0",
   "type": "module",
   "private": true,
@@ -16,6 +16,6 @@
     "@bedrock/karma": "^7.0.1",
     "@bedrock/server": "^5.1.0",
     "@bedrock/test": "^8.3.0",
-    "@digitalbazaar/vc-html-renderer": "file:.."
+    "@digitalbazaar/vc-html-render-method": "file:.."
   }
 }
