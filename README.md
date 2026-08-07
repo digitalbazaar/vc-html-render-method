@@ -105,6 +105,11 @@ Conforms to the inline HTML render suite of the
 - The `template` map form `{id, mediaType, digestMultibase}`.
 - `outputPreference.accessMode` and preferred `mediaType`.
 
+## Commercial Support
+
+Commercial support for this library is available upon request from
+Digital Bazaar: support@digitalbazaar.com
+
 ## License
 
-TBD.
+[BSD-3-Clause](LICENSE) © Digital Bazaar, Inc.
