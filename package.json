@@ -15,9 +15,9 @@
   "dependencies": {
   },
   "devDependencies": {
-    "@digitalbazaar/eslint-config": "^8.0.1",
+    "@digitalbazaar/eslint-config": "^9.0.0",
     "esbuild": "^0.28.1",
-    "eslint": "^9.39.4"
+    "eslint": "^10.8.0"
   },
   "engines": {
     "node": ">=22"
