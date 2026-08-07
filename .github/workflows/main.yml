@@ -23,7 +23,6 @@ jobs:
     - name: Run eslint
       run: npm run lint
   test-karma:
-    needs: [lint]
     runs-on: ubuntu-latest
     timeout-minutes: 10
     strategy:
