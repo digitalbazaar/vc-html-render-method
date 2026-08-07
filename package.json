@@ -1,6 +1,6 @@
 {
   "name": "@digitalbazaar/vc-html-render-method",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Render Verifiable Credential HTML Render Methods inside a nested, sandboxed iframe.",
   "license": "BSD-3-Clause",
   "type": "module",
@@ -12,8 +12,7 @@
     "lint": "eslint",
     "build": "esbuild lib/index.js --bundle --format=esm --outfile=dist/vc-html-render-method.esm.js"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@digitalbazaar/eslint-config": "^9.0.0",
     "esbuild": "^0.28.1",
