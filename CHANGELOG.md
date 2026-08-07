@@ -1,6 +1,6 @@
 # @digitalbazaar/vc-html-render-method ChangeLog
 
-## 0.1.0 - 2026-XX-XX
+## 1.0.0 - 2026-XX-XX
 
 - Initial release: render Verifiable Credential HTML Render Methods in a
   nested, sandboxed iframe (framework-agnostic; the consuming app's CSP is
