@@ -15,7 +15,7 @@
     "@bedrock/https-agent": "^4.1.0",
     "@bedrock/karma": "^7.0.1",
     "@bedrock/server": "^5.1.0",
-    "@bedrock/test": "^8.3.0",
+    "@bedrock/test": "^9.0.0",
     "@digitalbazaar/vc-html-render-method": "file:.."
   }
 }
