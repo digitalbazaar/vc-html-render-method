@@ -1,6 +1,6 @@
 {
   "name": "@digitalbazaar/vc-html-render-method",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "description": "Render Verifiable Credential HTML Render Methods inside a nested, sandboxed iframe.",
   "license": "BSD-3-Clause",
   "type": "module",
